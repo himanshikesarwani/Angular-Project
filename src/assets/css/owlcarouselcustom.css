@@ -1,0 +1,129 @@
+#sync1 .owl-item {
+    padding: 5px;
+}
+#sync2 .item{
+    margin: 2px;
+    color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+#owl-demo .item{
+	margin: 3px;
+}
+
+#owl-demo .item img{
+	display: block;
+	width: 100%;
+	height: auto;
+	max-height: 140px !important;
+}
+
+#owl-demo .synced {
+	opacity: 0.6;
+}
+
+@media only screen and (max-device-width: 1200px) {
+	#sync2 .owl-wrapper {
+		left: 0px !important; 
+	}
+}
+#sync2 .owl-item{width:100px!important;}
+#sync2 .owl-item img{
+	height: 75px;
+	width: 100px;	
+}
+
+#sync2 .item h1{
+  font-size: 18px;
+}
+
+#sync2 .synced .item{
+ 
+}
+.owl-stage-outer {height:auto;}
+.customNavigation {
+    opacity: 1;
+    position: absolute;
+    top: 100%;
+    width: 60%;
+    z-index: 99999999;
+}
+.customNavigation .prev{float:left;margin: 0px 5px; background:none;border:none;}
+.customNavigation .next{float:right;margin: 0px 5px 0px 0px;background:none;border:none;}
+.icon-white.icon-4x{color:#dedede;}
+
+.owl-carousel .owl-item img {
+    max-height: 600px;
+    width: auto;
+}
+
+#sync1 .owl-nav {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+}
+
+#sync1 .owl-prev:before {
+	content: "\41";
+	font-family: icomoon;
+	font-size: 50px;
+	color: #ccc;
+}
+
+#sync1 .owl-prev {
+	float: left;
+	background: none;
+}
+
+#sync1 .owl-next:before {
+	content: "\42";
+	font-family: icomoon;
+	font-size: 50px;
+	color: #ccc;
+}
+
+#sync1 .owl-next {
+	background: none;
+	float: right;
+}
+
+#owl-demo .item img {
+    height: 150px !important;
+}
+
+
+@media(max-width:1024px) {
+	#owl-demo .item img {
+	    height: 120px !important;
+	}
+}
+
+@media(max-width:768px) {
+	#owl-demo .item img {
+	    height: 100px !important;
+	}
+
+	#sync1 .owl-prev, #sync1 .owl-next {
+		display: none !important;
+	}
+}
+
+@media(max-width:480px) {
+
+	#owl-demo .item img {
+	    height: 80px !important;
+	}
+}
+
+@media(max-width:320px) {
+	#owl-demo .item img {
+	    height: 50px !important;
+	}
+}
+
+

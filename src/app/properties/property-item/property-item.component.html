@@ -1,0 +1,83 @@
+<div class="container compo">
+    <div class="row-fluid" id="main">
+
+        <header class="single-property-header border-top-wrap">
+
+            <h2>{{ property?.address1 }}, {{ property?.address2 }}, {{ property?.address3 }}, {{ property?.postcode }}
+            <span class="price_text"> £{{ property?.price }} {{ property?.pricetext | lowercase }}</span>
+            <strong class="showstatusclass">{{ property?.status }}</strong></h2>
+            <strong>Available : 27th April 2017</strong>
+        </header>
+        <section role="main" class="span9" id="content">
+            <article id="property-56" class="post-56 property type-property status-publish has-post-thumbnail hentry clearfix">
+                <div id="property_slider_wrapper">
+                    <div class="single-property-content-wrapper">
+                        <div class="col span_4 fwImage">
+							<div class="item" *ngFor="let image of property?.photos">								
+										{{ image.property }}
+								</div>	
+                            <div id="sync1" class="owl-carousel owl-theme">
+                                <div class="item" *ngFor="let img of images">
+                                    <img src="{{ img }}" />
+                                </div>							               
+                            </div>                        
+                            <div class="single-property-content">
+                                <ul>
+                                    <li *ngIf="property?.feature1">{{ property?.feature1 }}</li>
+                                    <li *ngIf="property?.feature2">{{ property?.feature2 }}</li>
+                                    <li *ngIf="property?.feature3">{{ property?.feature3 }}</li>
+                                    <li *ngIf="property?.feature4">{{ property?.feature4 }}</li>
+                                    <li *ngIf="property?.feature5">{{ property?.feature5 }}</li>
+                                    <li *ngIf="property?.feature6">{{ property?.feature6 }}</li>
+                                    <li *ngIf="property?.feature7">{{ property?.feature7 }}</li>
+                                    <li *ngIf="property?.feature8">{{ property?.feature8 }}</li>
+                                    <li *ngIf="property?.feature9">{{ property?.feature9 }}</li>
+                                    <li *ngIf="property?.feature10">{{ property?.feature10 }}</li>
+                                </ul>
+                                <p *ngIf="property?.full_text">
+                                    {{ property?.full_text }}
+                                </p>
+
+                            </div>
+                            <div class="single-property-map">
+                                <div class="map-wrap clearfix" id="the_map">
+                                    <span class="map-label">Property Map</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section role="complementary" class="span3" id="sidebar">
+            <aside class="widget widget-property-search" id="property-search-widget-2">
+
+                <div class="content-widget"><a href="index.php?option=com_propertylab&amp;task=enquiryform&amp;id=98&amp;tmpl=component" class="modal" id="modal_info"><i class="icon-show icon-envelope"></i>&nbsp;&nbsp;Send Enquiry</a>
+                </div>
+                <div class="content-widget"><a href="index.php?option=com_propertylab&amp;task=enquiryform&amp;id=98&amp;tmpl=component" class="modal" id="modal_info"><i class="icon-show icon-calendar"></i>&nbsp;&nbsp;Arrange a viewing</a>
+                </div>
+
+
+                <div class="content-widget"><a href="index.php?option=com_propertylab&amp;task=showmap&amp;id=98&amp;tmpl=component" class="modal" id="modal_info"><i class="icon-show icon-location"></i>&nbsp;&nbsp;View map</a>
+                </div>
+
+
+                <div class="content-widget"><a href="index.php?option=com_propertylab&amp;task=showdirection&amp;id=98&amp;tmpl=component" class="modal" id="modal_info"><i class="icon-show icon-compass"></i>&nbsp;&nbsp;Get Directions</a>
+                </div>
+
+
+                <div class="content-widget"><a href="index.php?option=com_propertylab&amp;task=sendfriendform&amp;id=98&amp;tmpl=component" class="modal" id="modal_info"><i class="icon-show icon-user"></i>&nbsp;&nbsp;Send to a friend</a>
+                </div>
+
+                <div class="content-widget"><a href="index.php?option=com_propertylab&amp;task=printproperty&amp;id=98" target="_blank"><i class="icon-show icon-print"></i>&nbsp;&nbsp;View brochure</a>
+                </div>
+
+                <div class="content-widget"><i class="icon-show icon-heart"></i>&nbsp;&nbsp;<a href="index.php?option=com_propertylab&amp;task=showproperty&amp;id=98&amp;addthisprop=favourite&amp;">Add to Favourites</a>
+                </div>
+            </aside>
+
+
+        </section>
+    </div>
+</div>

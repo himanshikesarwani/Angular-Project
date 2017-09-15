@@ -1,0 +1,77 @@
+<div class="container compo">
+
+    <div class="border-top-wrap border-wrap">
+        <h2> Property Search Results </h2>
+    </div>
+
+    <div class="row-fluid">
+        <div class="row-fluid">
+            <strong>1 - 20 of 41 matching properties</strong>
+            <br>
+            <br>
+            <div class="perpagepagination">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </div>
+        </div> 
+        <div style="clear:both;">
+            <div class="row row-fluid property-listing status-28 clearfix" *ngFor="let property of properties | paginate: { itemsPerPage: 10, currentPage: p }" id="page_search">
+
+                <!-- span4 listing-image div -->
+                <div class="span4 listing-image">
+                    <div class="property-image-container ">
+                        <a [routerLink]="['/showproperty', property.id ]">
+                            <img title=" {{ property.address2 }}, {{ property.address3 }}, {{ property.postcode }}" alt="SACKVILLE PLACE, MANCHESTER, M1" class="attachment-real-property-loop wp-post-image" src="{{ property.standard }}">
+                        </a>
+                    </div>
+                    <!-- /.property-images-container -->
+                </div>
+                <!-- /.span5 listing-image div -->
+
+                <!-- span8 listing-info div -->
+                <div class="span8 listing-info">
+                    <div class="listing-title">
+                        <a [routerLink]="['/showproperty', property.id]" title="SACKVILLE PLACE, MANCHESTER, M1">
+				
+				 {{ property.address2    }}, {{ property.address3 }}, {{ property.postcode }} </a>
+                    </div>
+                    <div class="listing-content">
+                        <div class="listing-property-price">
+                            £{{ property.price }} {{ property.pricetext | lowercase }}
+
+                            <a  target="_blank" style="font-size:0.6em;">
+				[Fees Apply]	
+				</a>
+                        </div>
+                        <div class="listing-excerpt">
+                            <p *ngIf="property.intro_text" innerHtml="{{ property.intro_text| truncate : 350 }}"></p>
+                            <i class="icon-show icon-bed" style="font-size:1.5em;"></i><span class="beds-curr" style=" font-size:2em; margin-top:5px;">3</span> bed(s)&nbsp;&nbsp;&nbsp;
+
+                            <i class="icon-show icon-bath" style="font-size:1.5em;"></i><span class="beds-curr" style=" font-size:2em; margin-top:5px;">2</span> bathroom(s)&nbsp;&nbsp;&nbsp;
+
+
+                            <i class="icon-show icon-tv" style="font-size:1.5em;"></i><span class="beds-curr" style=" font-size:2em; margin-top:5px;">1</span> rec rooms&nbsp;&nbsp;
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.span7 listing-info div -->
+                <div class="property-status">
+                    <a href="index.php?option=com_propertylab&amp;task=showproperty&amp;id=98&amp;perpage=5&amp;start=0&amp;Itemid=124" title="SACKVILLE PLACE, MANCHESTER, M1">View Details<i class="icon-file-pdf-o icon-view-details"></i></a>
+
+                    <a id="modal_info" class="modal" href="index.php?option=com_propertylab&amp;task=showmap&amp;id=98&amp;tmpl=component" rel="{handler: &quot;iframe&quot;, size: {x: 809.4, y: 471.2}}">Show on map<i class="icon-location icon-view-details"></i></a>
+
+                    <a href="index.php?option=com_propertylab&amp;task=enquiryform&amp;id=98&amp;tmpl=component" class="modal" id="modal_info" rel="{handler: &quot;iframe&quot;, size: {x: 809.4, y: 471.2}}">Send an enquiry<i class="icon-view-details icon-envelope"></i></a>
+                </div>
+            </div>
+
+
+
+
+            <!-- /. foreach -->
+            <div class="perpagepagination">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </div>
+        </div>
+    </div>
+</div>
